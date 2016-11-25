@@ -1,0 +1,23 @@
+<RootWidget>:
+	temp: temp
+	canvas.before:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: "./bg.png"
+		Color:
+			rgba: 51/255.0, 112/255.0, 192/255.0, .6
+		Rectangle:
+			pos: 0, self.size[1] * .4
+			size: self.size[0], self.size[1] * .2
+			#size_hint_x: 1
+			#size_hint_y: .2
+	Label:
+		id:temp
+		text: "Sıcaklık: ..."
+		font_size: "30sp"
+		bold: True
+	Switch:
+		id: ac_kapat
+		active: False
+		on_active: root.stateChanged(self.active)
