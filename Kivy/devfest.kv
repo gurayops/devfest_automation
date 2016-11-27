@@ -10,14 +10,12 @@
 		Rectangle:
 			pos: 0, self.size[1] * .4
 			size: self.size[0], self.size[1] * .2
-			#size_hint_x: 1
-			#size_hint_y: .2
 	Label:
 		id:temp
-		text: "Sıcaklık: ..."
+		text: "Temperature: ..."
 		font_size: "30sp"
 		bold: True
 	Switch:
-		id: ac_kapat
+		id: on_off
 		active: False
 		on_active: root.stateChanged(self.active)

@@ -5,13 +5,12 @@ import paho.mqtt.client as mqtt
 
 
 class RootWidget(BoxLayout):
-	"""docstring for RootWidget"""
 	def __init__(self, **kwargs):
 		super(RootWidget, self).__init__(**kwargs)
 		self.client = mqtt.Client()
 		self.client.on_connect = self.on_connect
 		self.client.on_message = self.on_message
-		self.client.connect("gu.ray.kim", 1883, 60)
+		self.client.connect("iot.eclipse.org", 1883, 60)
 		self.client.loop_start()
 
         def on_message(self, client, userdata, msg):
@@ -25,7 +24,6 @@ class RootWidget(BoxLayout):
 		
 
 class DevFestApp(App):
-	"""docstring for DevfestApp"""
 	def build(self):
 		return RootWidget()
 		
