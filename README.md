@@ -8,16 +8,21 @@ You should change MQTT server and topic according to your server information.
 
 # Installation
 Firstly install some dependencies. For LM75, this project uses a library prepared by lexruee:
+
 	https://github.com/lexruee/lm75
+
 In order to install it, you may want to use these commands:
+
 	sudo apt install python-dev i2c-tools libi2c-dev
 	git clone https://github.com/lexruee/lm75.git
 	sudo python setup.py install
+
 You should check this modules page for updates.
 
 For communicating with PE2A board, its own library is employed. You should compile it as a static object file(with .so extension if matters). You may prefer to change it according to your hardware if you are utilizing different parts.
 
 Lastly, run the code like this:
+
 	sudo python raspberry.py
 
 
